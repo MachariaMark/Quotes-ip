@@ -26,6 +26,7 @@ import { FeaturedquoteComponent } from './featuredquote/featuredquote.component'
   imports: [
     BrowserModule,
     AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
