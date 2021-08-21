@@ -15,6 +15,13 @@ import { FeaturedquoteComponent } from './featuredquote/featuredquote.component'
 @NgModule({
   declarations: [
     AppComponent
+    QuotesPipe,
+    QuoteComponent,
+    QuoteDetailComponent,
+    QuoteFormComponent,
+    LikeComponent,
+    DislikeComponent,
+    FeaturedquoteComponent
   ],
   imports: [
     BrowserModule,
