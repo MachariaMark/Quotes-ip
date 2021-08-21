@@ -1,0 +1,48 @@
+<br>
+<div class="container mr-10">
+    <app-featuredquote></app-featuredquote>
+</div>
+<br>
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<h2 class="text-center text-white"><b>Recently Shared quotes</b></h2>
+<div class="container mr-10">
+
+    <table class="table table-sm table-dark">
+        <thead>
+            <tr>
+                <th scope="col" class="text-white-50">
+                    <img src="/assets/kisspng-hippie-quotation-boho-chic-bohemian-style-hipster.png"
+                        class="img-header float-left" alt="sharing is caring">
+                    <img src="/assets/kisspng-hippie-quotation-boho-chic-bohemian-style-hipster.png"
+                        class="img-header float-right" alt="sharing is caring">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <div *ngFor='let quote of quotes;let i = index'>
+
+                    <td id="{{i}}"> {{ quote.quote}} {{ quote.mediumDate|date }}</td>
+                    <td class="blockquote-footer float-right">
+                        Author <br> <cite title="Author"> {{ quote.author }} </cite>
+                    </td>
+                    <td class="blockquote-footer float-left">
+                        Submitter <br> <cite title="Submitter"> {{ quote.submitter }} </cite>
+                    </td>
+
+                    <app-like></app-like>
+                    <app-dislike></app-dislike>
+                    <button (click)='toggleDetails(i)' class="btn btn-outline-light m-2">Quote Details</button>
+
+                    <div *ngIf='quote.showDescription'>
+                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'
+                            (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+                    </div>
+                </div>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
