@@ -1,4 +1,4 @@
-## QUOTES IP  <div dir="rtl">20.08.2021</div>
+## QUOTES <div dir="rtl">20.08.2021</div>
 #### <div dir="rtl">By **Mark Muchiri Macharia**</div>
 ## Description
 This project is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
