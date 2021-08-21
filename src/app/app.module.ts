@@ -14,7 +14,7 @@ import { FeaturedquoteComponent } from './featuredquote/featuredquote.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
     QuotesPipe,
     QuoteComponent,
     QuoteDetailComponent,
@@ -25,7 +25,7 @@ import { FeaturedquoteComponent } from './featuredquote/featuredquote.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],
